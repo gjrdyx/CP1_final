@@ -1,1 +1,37 @@
+#include <Servo.h>
+Servo myservo;
+int ldrPin = A0;
+int pos = 0;
+bool raised = false;
+int bottom = 40;
+int top = 170;
 
+void setup() {
+  myservo.attach(9);
+  myservo.write(bottom);
+  Serial.begin(9600);
+  Serial.println("Startup");
+}
+
+void loop() {
+  int ldrStatus = analogRead(ldrPin);
+  Serial.println(ldrStatus);
+
+  if (ldrStatus < 500 && raised) {
+    Serial.println("lowering");
+    raised = false;
+    for (int i = top; i > bottom; i--) {
+      myservo.write(i);
+      delay(10);
+    }
+  }
+
+  if (ldrStatus > 500 && !raised) {
+    Serial.println("raising");
+    raised = true;
+    for (int i = bottom; i < top; i++) {
+      myservo.write(i);
+      delay(10);
+    } 
+  }
+}
