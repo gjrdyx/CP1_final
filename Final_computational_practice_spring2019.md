@@ -37,6 +37,3 @@ What did you do in each of the past four weeks?
 The hard part was to think about how to transfer rotation to vertical movement and the structure that allows the six units 
 are able to be moved by only two servos. And after deciding add LEDs in each units, leaving space to let wiresgo through took
 me a long time. Also, learning and trying to combine all the components work together is really excieted.
-
-## Completed Work
-
