@@ -85,3 +85,17 @@ void loop() {
     }
 }
 ```
+Arduino pieces
+![alt text](https://github.com/gjrdyx/CP1_final/blob/master/Aruino.JPG)
+Base & Servo
+![alt text](https://github.com/gjrdyx/CP1_final/blob/master/BaseServo.JPG)
+Main Body Ground
+![alt text](https://github.com/gjrdyx/CP1_final/blob/master/MainBody_Ground.JPG)
+Main Body Units & Structure
+![alt text](https://github.com/gjrdyx/CP1_final/blob/master/MainBody_Units.jpg)
+Dark environment
+![alt text](https://github.com/gjrdyx/CP1_final/blob/master/CompleteWork_Dark.JPG)
+Medium light environment
+![alt text](https://github.com/gjrdyx/CP1_final/blob/master/CompleteWork_MediumLight.JPG)
+Strong light environment
+![alt text](https://github.com/gjrdyx/CP1_final/blob/master/CompleteWork_StrongLight.JPG)
