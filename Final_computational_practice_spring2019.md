@@ -1,5 +1,4 @@
-# Your Project Title Here
-
+# Light Hidden Houses
 This is an Arduino project that simulates a type of building hides from light.
 
 ## Summary
