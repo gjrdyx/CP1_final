@@ -34,3 +34,54 @@ What did you do in each of the past four weeks?
 The hard part was to think about how to transfer rotation to vertical movement and the structure that allows the six units 
 are able to be moved by only two servos. And after deciding add LEDs in each units, leaving space to let wiresgo through took
 me a long time. Also, learning and trying to combine all the components work together is really excieted.
+
+## Complete Work
+
+Code
+```
+#include <Servo.h>
+Servo myservo;
+int ldrPin = A0;
+int pos = 0;
+bool raised = false;
+int bottom = 50;
+int top = 140;
+int LED = 13;
+
+void setup() {
+  myservo.attach(9);
+  myservo.write(bottom);
+  Serial.begin(9600);
+  Serial.println("Startup");
+  pinMode(LED, OUTPUT);
+}
+
+void loop() {
+  int ldrStatus = analogRead(ldrPin);
+  Serial.println(ldrStatus);
+
+  if (ldrStatus < 160 && raised) {
+    Serial.println("lowering");
+    raised = false;
+    for (int i = top; i > bottom; i--) {
+      myservo.write(i);
+      delay(10);
+    }
+  }
+
+  if (ldrStatus > 200 && !raised) {
+    Serial.println("raising");
+    raised = true;
+    for (int i = bottom; i < top; i++) {
+      myservo.write(i);
+      delay(10);
+    }  
+    }
+     if (ldrStatus > 320) {
+      digitalWrite(LED,HIGH);  
+    }
+    if (ldrStatus < 320) {
+      digitalWrite(LED,LOW);  
+    }
+}
+```
