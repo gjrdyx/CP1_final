@@ -19,8 +19,6 @@ while if light is suitable for people activites, they will go up. If it is so da
 -200 resistor
 -10K resistor
 
-## When your project is completed, you will then add the following sections:
-
 ## Timeline
 
 What did you do in each of the past four weeks?
